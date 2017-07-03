@@ -16,4 +16,4 @@
 
 # AHQBookRead运行效果GIF：
 
-![CarouselView in action](GIF_001.gif)
+![CarouselView in action](git-001.gif)
