@@ -35,6 +35,10 @@ import UIKit
     /// 点击下载
     @objc optional func readMenuClickDownload(readMenu:DZMReadMenu)
     
+    /// 点击返回按钮
+    @objc optional func readMenuClickBackButton(readMenu:DZMReadMenu, button:UIButton)
+    
+    
     /// 点击书签按钮
     @objc optional func readMenuClickMarkButton(readMenu:DZMReadMenu, button:UIButton)
     

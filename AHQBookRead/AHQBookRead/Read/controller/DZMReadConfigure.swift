@@ -30,7 +30,7 @@ let DZMReadMinFontSize:NSInteger = 12
 let DZMReadMaxFontSize:NSInteger = 25
 
 /// 阅读当前默认字体大小
-let DZMReadDefaultFontSize:NSInteger = 14
+let DZMReadDefaultFontSize:NSInteger = 20
 
 import UIKit
 

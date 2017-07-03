@@ -24,6 +24,7 @@ class DZMRMTopView: DZMRMBaseView {
         // 返回
         back = UIButton(type:.custom)
         back.setImage(UIImage(named:"G_Back_0"), for: .normal)
+        back.addTarget(self, action: #selector(DZMRMTopView.goBack(button:)), for: .touchUpInside)
         addSubview(back)
         
         // leftTitle
@@ -59,6 +60,12 @@ class DZMRMTopView: DZMRMBaseView {
         }
         self.tobTitle.text = title
         
+    }
+    
+    
+    @objc private func goBack(button:UIButton) {
+        
+        readMenu.delegate?.readMenuClickBackButton?(readMenu: readMenu, button: button)
     }
     
     

@@ -104,6 +104,15 @@ class DZMReadController: DZMViewController,DZMReadMenuDelegate,DZMCoverControlle
         creatPageController(readOperation.GetCurrentReadViewController(isUpdateFont: true, isSave: true))
     }
     
+    
+    /// 点击返回按钮
+    func readMenuClickBackButton(readMenu: DZMReadMenu, button: UIButton) {
+        print("点击返回按钮-------")
+     
+        readMenu.lightView.reSetSystemBrightness()
+    }
+
+    
     /// 点击书签列表
     func readMenuClickMarkList(readMenu: DZMReadMenu, readMarkModel: DZMReadMarkModel) {
         
@@ -357,9 +366,12 @@ class DZMReadController: DZMViewController,DZMReadMenuDelegate,DZMCoverControlle
         if abs(TempNumber) % 2 == 0 { // 背面
             
             let vc = UIViewController()
-            
-            vc.view.backgroundColor =  DZMReadConfigure.shared().readColor().withAlphaComponent(0.95)
-            
+            // 配置背景颜色
+            if DZMUserDefaults.boolForKey(DZMKey_IsNighOrtDay) {
+                vc.view.backgroundColor =  DZMReadHeaderAndFooterTextColor_NIGHT
+            }else{
+                vc.view.backgroundColor =  DZMReadConfigure.shared().readColor()
+            }
             return vc
             
         }else{ // 内容
@@ -377,8 +389,12 @@ class DZMReadController: DZMViewController,DZMReadMenuDelegate,DZMCoverControlle
             
             let vc = UIViewController()
             
-            vc.view.backgroundColor =  DZMReadConfigure.shared().readColor().withAlphaComponent(0.95)
-            
+            // 配置背景颜色
+            if DZMUserDefaults.boolForKey(DZMKey_IsNighOrtDay) {
+                vc.view.backgroundColor =  DZMReadHeaderAndFooterTextColor_NIGHT
+            }else{
+                vc.view.backgroundColor =  DZMReadConfigure.shared().readColor()
+            }
             return vc
             
         }else{ // 内容
