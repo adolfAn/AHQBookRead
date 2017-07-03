@@ -2,7 +2,6 @@
 
 ![Swift Version](https://img.shields.io/badge/Swift-3.x-orange.svg) 
 ![Xcode Version](https://img.shields.io/badge/Xcode-8.2.1-orange.svg) 
-![Author](https://img.shields.io/badge/Author-DZM-blue.svg) 
 
 
 1，基于DZMeBookRead项目开发的阅读器（DZMeBookRead项目下载地址：https://github.com/dengzemiao/DZMeBookRead/blob/master/README.md）
